@@ -1,0 +1,32 @@
+apply plugin: 'jetty'
+apply plugin: 'eclipse-wtp'
+
+
+allprojects {
+    // General Project Info
+    group = 'rayshare'
+    version = '1.0'
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    task "create-dirs" << {
+        sourceSets*.java.srcDirs*.each { it.mkdirs() }
+        sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+    }
+
+    task rolecall << { task -> println "Project Name: $task.project.name" }
+}
+
+subprojects {
+    // Repositories
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.11'
+    }
+}
+
+
