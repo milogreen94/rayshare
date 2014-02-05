@@ -40,3 +40,8 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Gradle generated files #
+##########################
+cache.properties*
+*.bin
