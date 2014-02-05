@@ -45,3 +45,7 @@ Thumbs.db
 ##########################
 cache.properties*
 *.bin
+
+# IntelliJ #
+############
+*.iml
