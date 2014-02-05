@@ -1,0 +1,21 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'eclipse-wtp'
+
+
+dependencies {
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    compile 'org.slf4j:slf4j-log4j12:1.7.5',
+            'org.springframework:spring-core:3.2.6.RELEASE',
+            'org.springframework:spring-web:3.2.6.RELEASE',
+            'org.springframework:spring-webmvc:3.2.6.RELEASE',
+            'org.springframework.security:spring-security-core:3.2.0.RELEASE',
+            'org.springframework.security:spring-security-web:3.2.0.RELEASE',
+            'org.springframework.security:spring-security-config:3.2.0.RELEASE'
+    runtime 'jstl:jstl:1.2'
+    testCompile 'junit:junit:4.11',
+            'org.springframework:spring-test:3.2.6.RELEASE'
+
+}
+
+
